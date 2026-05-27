@@ -10,21 +10,24 @@
         <title>moat Travel</title>	
     </head>
     <body>
- 		<p>Hello, world!</p>
         <div class="moattravel-wrapper">
             <div th:replace="~{fragment :: header}"></div>
              
-            <main>
-                <div class="container pt-4 pb-5 moattravel-container">
-                    <div th:if="${param.loggedIn}" class="alert alert-info">
-                        ログインしました。
-                    </div>  
-                     
-                    <div th:if="${param.loggedOut}" class="alert alert-info">
-                        ログアウトしました。
-                    </div>
-                </div>
-            </main>
+			<main>
+			    <div class="container pt-4 pb-5 moattravel-container">
+			        <div th:if="${param.loggedIn}" class="alert alert-info">
+			            ログインしました。
+			        </div>  
+			        
+			        <div th:if="${param.loggedOut}" class="alert alert-info">
+			            ログアウトしました。
+			        </div>
+			        
+			        <div th:if="${successMessage}" class="alert alert-info">
+			            <span th:text="${successMessage}"></span>
+			        </div>                    
+			    </div>
+			</main>
              
             <div th:replace="~{fragment :: footer}"></div>
         </div>    
