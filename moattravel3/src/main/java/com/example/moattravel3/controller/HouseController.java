@@ -7,10 +7,12 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.moattravel3.entity.House;
+import com.example.moattravel3.form.ReservationInputForm;
 import com.example.moattravel3.repository.HouseRepository;
 
 import lombok.RequiredArgsConstructor;
@@ -75,13 +77,13 @@ public class HouseController {
 		} else {
 
 			housePage = houseRepository.findAll(pageable);
-			
-			if(order != null && order.equals("priceAsc")) {
-				
+
+			if (order != null && order.equals("priceAsc")) {
+
 				housePage = houseRepository.findAllByOrderByPriceAsc(pageable);
-				
-			}else {
-				
+
+			} else {
+
 				housePage = houseRepository.findAllByOrderByCreatedAtDesc(pageable);
 			}
 		}
@@ -93,10 +95,22 @@ public class HouseController {
 		model.addAttribute("area", area);
 
 		model.addAttribute("price", price);
-		
+
 		model.addAttribute("order", order);
 
 		return "houses/index";
 	}
 
+	@GetMapping("/{id}")
+	public String show(@PathVariable(name = "id") Integer id, Model model) {
+
+		House house = houseRepository.getReferenceById(id);
+
+		model.addAttribute("house", house);
+		
+		model.addAttribute("reservationInputForm", new ReservationInputForm());
+
+		return "houses/show";
+
+	}
 }
