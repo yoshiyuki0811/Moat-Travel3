@@ -109,7 +109,7 @@ public class AdminHouseController {
 		return "admin/houses/edit";
 	}
 	
-	@PostMapping("{id}/update")
+	@PostMapping("/{id}/update")
 	public String update(@ModelAttribute @Validated HouseEditForm houseEditForm, BindingResult bindingResult, RedirectAttributes redirectAttributes) {
 		
 		if(bindingResult.hasErrors()) {
