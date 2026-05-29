@@ -20,7 +20,7 @@ import com.example.moattravel3.entity.House;
 import com.example.moattravel3.form.HouseEditForm;
 import com.example.moattravel3.form.HouseRegisterForm;
 import com.example.moattravel3.repository.HouseRepository;
-import com.example.moattravel3.servive.HouseService;
+import com.example.moattravel3.service.HouseService;
 
 import lombok.RequiredArgsConstructor;
 

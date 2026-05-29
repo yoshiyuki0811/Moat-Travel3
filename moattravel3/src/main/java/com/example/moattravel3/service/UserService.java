@@ -1,4 +1,4 @@
-package com.example.moattravel3.servive;
+package com.example.moattravel3.service;
 
 import jakarta.transaction.Transactional;
 

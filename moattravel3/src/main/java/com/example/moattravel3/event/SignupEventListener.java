@@ -8,7 +8,7 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Component;
 
 import com.example.moattravel3.entity.User;
-import com.example.moattravel3.servive.VerificationTokenService;
+import com.example.moattravel3.service.VerificationTokenService;
 
 import lombok.RequiredArgsConstructor;
 

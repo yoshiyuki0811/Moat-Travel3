@@ -16,7 +16,7 @@ import com.example.moattravel3.entity.User;
 import com.example.moattravel3.form.UserEditForm;
 import com.example.moattravel3.repository.UserRepository;
 import com.example.moattravel3.security.UserDetailsImpl;
-import com.example.moattravel3.servive.UserService;
+import com.example.moattravel3.service.UserService;
 
 import lombok.RequiredArgsConstructor;
 

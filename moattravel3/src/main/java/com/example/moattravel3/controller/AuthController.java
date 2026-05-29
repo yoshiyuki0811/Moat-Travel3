@@ -17,8 +17,8 @@ import com.example.moattravel3.entity.User;
 import com.example.moattravel3.entity.VerificationToken;
 import com.example.moattravel3.event.SignupEventPublisher;
 import com.example.moattravel3.form.SignupForm;
-import com.example.moattravel3.servive.UserService;
-import com.example.moattravel3.servive.VerificationTokenService;
+import com.example.moattravel3.service.UserService;
+import com.example.moattravel3.service.VerificationTokenService;
 
 import lombok.RequiredArgsConstructor;
 
